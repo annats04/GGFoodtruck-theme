@@ -25,32 +25,7 @@
        </div>
 
 
-        <!-- Menu Section -->
-        <div class="menu">
-            <?php 
-            $menu_image = get_field('menu-image'); // Make sure you have this ACF field set
-            if ($menu_image): ?>
-                <img src="<?php echo esc_url($menu_image['url']); ?>" alt="Menu">
-            <?php endif; ?>
-        </div>
-
-        <!-- Booking Section -->
-        <div class="booking">
-            <div class="booking-content">
-                <div class="booking-text">
-                    <h1><?php the_field('booking-title'); ?></h1>
-                    <p><?php the_field('booking-description'); ?></p>
-                </div>
-                <div class="contact-form">
-                    <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post">
-                        <!-- Example form fields, you should create your own form fields -->
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="message" placeholder="Your Message"></textarea>
-                        <button type="submit">Send Inquiry</button>
-                    </form>
-                </div>
-            </div>
+    
         </div>
 
     <?php endwhile; ?>
