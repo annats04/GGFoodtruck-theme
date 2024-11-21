@@ -8,10 +8,15 @@
     $abouttext = get_field("about_p");
     $aboutheadline = get_field("about_h1");
     $collage = get_field("collage");
+    $menu = get_field("menu");
+    $bookingheadline = get_field("bookingh1");
+    $bookingtext = get_field("bookingtext");
+   
+
     ?>
 
         <!-- Hero Section -->
-        <img src="<?php echo $heroimage["url"]; ?>" alt="bookstore image" class="hero" >
+        <img src="<?php echo $heroimage["url"]; ?>" alt="hero image" class="hero" >
 
 
         <!-- Intro Section -->
@@ -24,8 +29,22 @@
   
        </div>
 
+        <!-- Menu Section -->
+        <div class="menu">
+        <img src="<?php echo $menu["url"]; ?>" alt="menu image" class="menu" >
+        </div>
 
-    
+        <!-- Booking Section -->
+        <div class="booking">
+            <div class="booking-content">
+                <div class="booking-text">
+                <h1><?php echo  $bookingheadline; ?></h1>
+                    <p><?php echo  $bookingtext; ?></p>
+                </div>
+                <div class="contact-form">
+                <?php echo do_shortcode('[contact-form-7 id="1f164f8" title="Booking"]'); ?>
+                </div>
+            </div>
         </div>
 
     <?php endwhile; ?>
