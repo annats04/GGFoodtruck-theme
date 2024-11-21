@@ -1,2 +1,206 @@
 /* Theme Name: Gadens GG
 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: #FBFAF8;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-family: "Rubik", serif;
+    z-index: 1;
+    position: relative;
+
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav ul li {
+    color: rgb(26, 25, 25);
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.nav ul li:hover {
+    color: #ED1590;
+}
+
+.nav .logo img {
+    width: 80px;
+    height: auto;
+}
+
+.nav .logo img {
+    width: 100px;
+    height: auto;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-test.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    width: 100%;
+}
+
+.intro {
+    background-color: #1A1B1C;
+    font-family: "Dela Gothic One", serif;
+    width: 100vw;
+    position: relative;
+    z-index: 0;
+}
+
+.intro::after {
+    position: absolute;
+    top: -10vw;
+    left: 0;
+    content: '';
+    height: 0;
+    width: 0;
+    border-right: 100vw solid #1A1B1C;
+    border-top: 10vw solid transparent;
+    border-bottom: 0px solid transparent;
+    overflow: hidden;
+}
+
+.intro img {
+    height: auto;
+    width: 100%;
+}
+
+.intro p {
+    color: #FBFAF8;
+    margin-top: 3%;
+    font-family: "Rubik", serif;
+    max-width: 882px;
+    font-size: 29px;
+    margin-left: 108px;
+    margin-bottom: 6%;
+}
+
+.intro h1 {
+    color: #FBFAF8;
+    font-size: 600%;
+    line-height: 90px;
+    padding-top: 3.7%;
+    margin-left: 108px;
+}
+
+.menu {
+    padding: 6%;
+    background-color: #FBFAF8;
+    margin-bottom: 6%;
+}
+
+.menu img {
+    height: auto;
+    width: 100%;
+
+}
+
+.booking {
+    background-color: #1A1B1C;
+    font-family: "Dela Gothic One", serif;
+    width: 100vw;
+    position: relative;
+    z-index: 0;
+    padding-bottom: 7%;
+}
+
+.booking::after {
+    position: absolute;
+    top: -10vw;
+    left: 0;
+    content: '';
+    height: 0;
+    width: 0;
+    border-left: 100vw solid #1A1B1C;
+    border-top: 10vw solid transparent;
+    border-bottom: 0px solid transparent;
+    overflow: hidden;
+}
+
+.booking-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+    gap: 5%;
+    /* Optional for spacing between text and form */
+}
+
+.booking-text {
+    color: #FBFAF8;
+    font-family: "Rubik", serif;
+    max-width: 544px;
+}
+
+.booking h1 {
+    color: #FBFAF8;
+    font-size: 600%;
+    line-height: 90px;
+    padding-top: 3.7%;
+}
+
+.booking p {
+    color: #FBFAF8;
+    margin-top: 3%;
+    font-family: "Rubik", serif;
+    font-size: 29px;
+    margin-bottom: 6%;
+}
+
+.contact-form {
+    background-color: #FBFAF8;
+    border-radius: 10px;
+    padding: 20px;
+    width: 40%;
+
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: #0d0c0d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.contact-form button:hover {
+    background-color: #D3137E;
+}
