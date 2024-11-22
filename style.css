@@ -291,15 +291,20 @@ input[type="submit"]:focus {
 .trees {
     position: relative;
     width: 100%;
+    /* Adjust width to fit your layout */
     height: 500px;
-    background-size: cover;
+    /* This controls the height of the div */
+    background-size: contain;
+    /* Ensures the image is fully visible */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
     background-position: center;
+    /* Centers the image within the div */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-
 }
 
 .image-overlay {
