@@ -31,9 +31,9 @@
        
         <!-- Intro Section -->
        <div class="intro">
-<h2>This sucks man! </h2>
        <h1><?php echo $aboutheadline; ?></h1>
        <p><?php echo  $abouttext; ?></p>
+<h2>This sucks man! Git doesnt work properly</h2>
 
        <img src="<?php echo $collage["url"]; ?>" alt="collage image" class="intro" >
 
