@@ -17,6 +17,7 @@
     $maptext = get_field("map-text");
     $treeh1 = get_field("tree-h1");
     $treeimg = get_field("tree-img");
+    $treebadge = get_field("tree-badge");
 
 
     ?>
@@ -69,12 +70,12 @@
     </div>
 </div>
 
-<div class="trees">
+<div class="trees" style="background-image: url('<?php echo $treeimg["url"]; ?>');">
     <div class="image-overlay"></div>
-    <h1 class="trees-text"><?php echo  $treeh1; ?></h1>
+    <h1 class="trees-text"><?php echo $treeh1; ?></h1>
 
     <div class="logo-container">
-    <img src="<?php echo $treeimg["url"]; ?>" alt="trees" class="logo-container" >
+        <img src="<?php echo $treebadge["url"]; ?>" alt="trees" class="tree-logo">
     </div>
 </div>
 
