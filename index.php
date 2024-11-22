@@ -67,6 +67,15 @@
     </div>
 </div>
 
+<div class="trees">
+    <div class="image-overlay"></div>
+    <h1 class="trees-text"><?php echo  $treeh1; ?></h1>
+
+    <div class="logo-container">
+    <img src="<?php echo $map["url"]; ?>" alt="trees" class="logo-container" >
+    </div>
+</div>
+
 
     <?php endwhile; ?>
 <?php endif; ?>
