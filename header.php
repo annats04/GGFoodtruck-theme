@@ -10,28 +10,27 @@
 <body <?php body_class(); ?>>
 
 <div class="nav">
-    <!-- Logo -->
     <div class="logo">
         <?php
-        $logo_path = get_template_directory() . '/assets/logo.png';
+        // Display the logo if the file exists
+        $logo_path = get_template_directory() . '/assets/logo_GG-01.png';
         if (file_exists($logo_path)): ?>
             <a href="<?php echo home_url(); ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/logo1_GG.png" alt="<?php bloginfo('name'); ?> Logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/logo_GG-01.png" alt="<?php bloginfo('name'); ?> Logo">
             </a>
         <?php else: ?>
             <p>Logo not found</p>
         <?php endif; ?>
     </div>
 
-    <!-- Navigation Menu -->
+    <!-- WordPress Navigation Menu -->
     <?php
-    wp_nav_menu(array(
+    wp_nav_menu( array(
         'theme_location' => 'primary-menu',
-        'container' => false, // Removes the <div> container
-        'menu_class' => '', // Adds no class to <ul> by default
-        'items_wrap' => '<ul class="nav-menu">%3$s</ul>', // Adds "nav-menu" class to <ul>
+        'container' => false, // Don't wrap in any container
+        'items_wrap' => '<ul>%3$s</ul>', // Wrap items in <ul> tag
         'fallback_cb' => function () {
-            echo '<ul class="nav-menu"><li><a href="#">Menu not assigned</a></li></ul>';
+            echo '<ul><li><a href="#">Menu not assigned</a></li></ul>';
         },
     ));
     ?>
