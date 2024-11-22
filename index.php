@@ -31,7 +31,7 @@
 
         <!-- Intro Section -->
        <div class="intro">
-<h1> HELLO WORLD TEST </h1>
+
        <h1><?php echo $aboutheadline; ?></h1>
        <p><?php echo  $abouttext; ?></p>
 
@@ -82,7 +82,7 @@
             <h1><?php echo  $maph1; ?></h1>
             <p><?php echo  $maptext; ?></p>
                 </div>
-        
+                <h1> HELLO WORLD TEST </h1>        <h1> HELLO WORLD TEST </h1>        <h1> HELLO WORLD TEST </h1>
     </div>
 </div>
 
