@@ -160,7 +160,7 @@ body {
     margin-bottom: 6%;
 }
 
-.hero video {
+/* .hero video {
     z-index: -10000;
     width: 100%;
     object-fit: cover;
@@ -174,5 +174,39 @@ body {
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.768), rgba(0, 0, 0, 0));
+
+} */
+
+.map .content {
+    display: flex;
+    max-width: 1250px;
+    margin: auto;
+    margin-top: 100px;
+    font-family: "Rubik", serif;
+}
+
+.map .image img {
+    width: 90%;
+
+}
+
+.map .text {
+    max-width: 600px;
+}
+
+.map .text h1 {
+    font-size: 450%;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: "Dela Gothic One", serif;
+    line-height: 90px;
+
+
+}
+
+.map .text p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
 
 }
