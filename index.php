@@ -28,10 +28,10 @@
 
         <!-- Hero Section -->
    
-<h1> HELLO WORLD TEST </h1>
+
         <!-- Intro Section -->
        <div class="intro">
-
+<h1> HELLO WORLD TEST </h1>
        <h1><?php echo $aboutheadline; ?></h1>
        <p><?php echo  $abouttext; ?></p>
 
