@@ -62,7 +62,7 @@ body {
 
 .intro::after {
     position: absolute;
-    top: -10vw;
+    top: -9.9vw;
     left: 0;
     content: '';
     height: 0;
@@ -120,7 +120,7 @@ body {
 
 .booking::after {
     position: absolute;
-    top: -10vw;
+    top: -9.9vw;
     left: 0;
     content: '';
     height: 0;

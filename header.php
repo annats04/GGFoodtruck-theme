@@ -15,7 +15,7 @@
         $logo_path = get_template_directory() . '/assets/logo.png';
         if (file_exists($logo_path)): ?>
             <a href="<?php echo home_url(); ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/logo.png" alt="<?php bloginfo('name'); ?> Logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/logo1_GG.png" alt="<?php bloginfo('name'); ?> Logo">
             </a>
         <?php else: ?>
             <p>Logo not found</p>
