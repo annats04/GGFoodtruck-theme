@@ -14,20 +14,20 @@
     $map = get_field("map-img");
     $maptext = get_field("map-text");
 
-    // Ensure $herovideo is valid
-    $herovideoFileUrl = (!empty($herovideo) && is_array($herovideo)) ? $herovideo['url'] : '';
-    ?>
+    // // Ensure $herovideo is valid
+    // $herovideoFileUrl = (!empty($herovideo) && is_array($herovideo)) ? $herovideo['url'] : '';
+    // ?>
 
-    <!-- Hero Section -->
-    <div class="hero">
-        <?php if ($herovideoFileUrl): ?>
-            <div class="videooverlay">
-                <video autoplay loop muted playsinline>
-                    <source src="<?php echo esc_url($herovideoFileUrl); ?>" type="video/mp4">
-                </video>
-            </div>
-        <?php endif; ?>
-    </div>
+    // <!-- Hero Section -->
+    <!-- // <div class="hero">
+    //     <?php if ($herovideoFileUrl): ?>
+    //         <div class="videooverlay">
+    //             <video autoplay loop muted playsinline>
+    //                 <source src="<?php echo esc_url($herovideoFileUrl); ?>" type="video/mp4">
+    //             </video>
+    //         </div>
+    //     <?php endif; ?>
+    // </div> -->
 
     <!-- Intro Section -->
     <div class="intro">
