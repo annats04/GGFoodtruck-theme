@@ -15,9 +15,13 @@
     $herovideoFileUrl = $herovideo['url'];
     $map = get_field("map-img");
     $maptext = get_field("map-text");
+    $maph1 = get_field("map-h1");
     $treeh1 = get_field("tree-h1");
     $treeimg = get_field("tree-img");
     $treebadge = get_field("tree-badge");
+    $team = get_field("team");
+    $teamh1 = get_field("teamh1");
+    $teamtext = get_field("team-text");
 
 
     ?>
@@ -57,18 +61,33 @@
             </div>
         </div>
 
+
+        <div class="team">
+            <div class="content-team">
+                 <div class="text-team">
+            <h1><?php echo  $maph1; ?></h1>
+            <p><?php echo  $maptext; ?></p>
+                </div>
+        <div class="image-team">
+        <img src="<?php echo $map["url"]; ?>" alt="team image" class="image-team" >
+        </div>
+    </div>
+</div>
+
         <!-- Map Section -->
         <div class="map">
     <div class="content">
         <div class="image">
-        <img src="<?php echo $map["url"]; ?>" alt="menu image" class="map" >
+        <img src="<?php echo $team["url"]; ?>" alt="menu image" class="map" >
         </div>
         <div class="text">
-            <h1>WHERE WE HAVE BEEN?</h1>
-            <p><?php echo  $maptext; ?></p>
+            <h1><?php echo  $teamh1; ?></h1>
+            <p><?php echo  $teamtext; ?></p>
         </div>
     </div>
 </div>
+
+
 
 <div class="trees">
     <div class="image-overlay" style="background-image: url('<?php echo $treeimg["url"]; ?>');"></div>
