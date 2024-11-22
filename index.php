@@ -4,20 +4,27 @@
     <?php while (have_posts()): the_post(); ?>
 
     <?php 
-    $heroimage = get_field("hero-img");
     $abouttext = get_field("about_p");
     $aboutheadline = get_field("about_h1");
     $collage = get_field("collage");
     $menu = get_field("menu");
     $bookingheadline = get_field("bookingh1");
     $bookingtext = get_field("bookingtext");
+    $herovideo = get_field("video");
+    $herovideoFileName = $herovideo['filename'];
+    $herovideoFileUrl = $herovideo['url'];
    
 
     ?>
 
         <!-- Hero Section -->
-        <img src="<?php echo $heroimage["url"]; ?>" alt="hero image" class="hero" >
-
+        <div class="hero">
+        <?php if ($herovideo): ?>
+            <div class="videooverlay">
+                <video autoplay loop muted playsinline>
+                    <source src="<?php echo esc_url($herovideoFileUrl); ?>" type="video/mp4">
+                </video>
+            </div>
 
         <!-- Intro Section -->
        <div class="intro">
@@ -41,7 +48,7 @@
                 <h1><?php echo  $bookingheadline; ?></h1>
                     <p><?php echo  $bookingtext; ?></p>
                 </div>
-                
+
                 <div class="contact-form">
                 <?php echo do_shortcode('[contact-form-7 id="1f164f8" title="Booking"]'); ?>
                 </div>
