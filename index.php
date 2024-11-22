@@ -73,9 +73,6 @@
     </div>
 </div>
 
-       
-
-        <!-- Map Section -->
         <div class="map">
             <div class="content">
             <div class="image">
