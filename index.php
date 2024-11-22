@@ -11,52 +11,75 @@
     $bookingheadline = get_field("bookingh1");
     $bookingtext = get_field("bookingtext");
     $herovideo = get_field("video");
-    $herovideoFileName = $herovideo['filename'];
-    $herovideoFileUrl = $herovideo['url'];
     $map = get_field("map-img");
     $maptext = get_field("map-text");
-   
 
+    // Ensure $herovideo is valid
+    $herovideoFileUrl = (!empty($herovideo) && is_array($herovideo)) ? $herovideo['url'] : '';
     ?>
 
-        <!-- Hero Section -->
-        <div class="hero">
-        <?php if ($herovideo): ?>
+    <!-- Hero Section -->
+    <div class="hero">
+        <?php if ($herovideoFileUrl): ?>
             <div class="videooverlay">
                 <video autoplay loop muted playsinline>
                     <source src="<?php echo esc_url($herovideoFileUrl); ?>" type="video/mp4">
                 </video>
             </div>
+        <?php endif; ?>
+    </div>
 
-        <!-- Intro Section -->
-       <div class="intro">
+    <!-- Intro Section -->
+    <div class="intro">
+        <?php if ($aboutheadline): ?>
+            <h1><?php echo esc_html($aboutheadline); ?></h1>
+        <?php endif; ?>
 
-       <h1><?php echo $aboutheadline; ?></h1>
-       <p><?php echo  $abouttext; ?></p>
+        <?php if ($abouttext): ?>
+            <p><?php echo esc_html($abouttext); ?></p>
+        <?php endif; ?>
 
-       <img src="<?php echo $collage["url"]; ?>" alt="collage image" class="intro" >
-  
-       </div>
+        <?php if (!empty($collage) && isset($collage['url'])): ?>
+            <img src="<?php echo esc_url($collage['url']); ?>" alt="Collage image" class="intro-image">
+        <?php endif; ?>
+    </div>
 
-        <!-- Menu Section -->
-        <div class="menu">
-        <img src="<?php echo $menu["url"]; ?>" alt="menu image" class="menu" >
-        </div>
+    <!-- Menu Section -->
+    <div class="menu">
+        <?php if (!empty($menu) && isset($menu['url'])): ?>
+            <img src="<?php echo esc_url($menu['url']); ?>" alt="Menu image" class="menu-image">
+        <?php endif; ?>
+    </div>
 
-        <!-- Booking Section -->
-        <div class="booking">
-            <div class="booking-content">
-                <div class="booking-text">
-                <h1><?php echo  $bookingheadline; ?></h1>
-                    <p><?php echo  $bookingtext; ?></p>
-                </div>
+    <!-- Booking Section -->
+    <div class="booking">
+        <div class="booking-content">
+            <div class="booking-text">
+                <?php if ($bookingheadline): ?>
+                    <h1><?php echo esc_html($bookingheadline); ?></h1>
+                <?php endif; ?>
 
-                <div class="contact-form">
+                <?php if ($bookingtext): ?>
+                    <p><?php echo esc_html($bookingtext); ?></p>
+                <?php endif; ?>
+            </div>
+
+            <div class="contact-form">
                 <?php echo do_shortcode('[contact-form-7 id="1f164f8" title="Booking"]'); ?>
-                </div>
             </div>
         </div>
+    </div>
 
+    <!-- Map Section -->
+    <div class="map">
+        <?php if (!empty($map) && isset($map['url'])): ?>
+            <img src="<?php echo esc_url($map['url']); ?>" alt="Map image">
+        <?php endif; ?>
+
+        <?php if ($maptext): ?>
+            <p><?php echo esc_html($maptext); ?></p>
+        <?php endif; ?>
+    </div>
 
     <?php endwhile; ?>
 <?php endif; ?>
