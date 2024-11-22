@@ -10,6 +10,7 @@
 <body <?php body_class(); ?>>
 
 <div class="nav">
+    <!-- Logo -->
     <div class="logo">
         <?php
         $logo_path = get_template_directory() . '/assets/logo.png';
@@ -21,17 +22,20 @@
             <p>Logo not found</p>
         <?php endif; ?>
     </div>
-    
+
+    <!-- Navigation Menu -->
     <?php
-    wp_nav_menu( array(
+    wp_nav_menu(array(
         'theme_location' => 'primary-menu',
-        'container' => false,
-        'items_wrap' => '<ul>%3$s</ul>',
+        'container' => false, // Removes the <div> container
+        'menu_class' => '', // Adds no class to <ul> by default
+        'items_wrap' => '<ul class="nav-menu">%3$s</ul>', // Adds "nav-menu" class to <ul>
         'fallback_cb' => function () {
-            echo '<ul><li><a href="#">Menu not assigned</a></li></ul>';
+            echo '<ul class="nav-menu"><li><a href="#">Menu not assigned</a></li></ul>';
         },
     ));
     ?>
+</div>
 
     <?php if (function_exists('pll_the_languages')): ?>
         <div class="language-switcher">
