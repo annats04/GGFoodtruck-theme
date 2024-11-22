@@ -11,30 +11,42 @@
 
 <div class="nav">
     <div class="logo">
-        <a href="<?php echo home_url(); ?>">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/logo.png" alt="Logo">
-        </a>
+        <?php
+        $logo_path = get_template_directory() . '/assets/logo.png';
+        if (file_exists($logo_path)): ?>
+            <a href="<?php echo home_url(); ?>">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/logo.png" alt="<?php bloginfo('name'); ?> Logo">
+            </a>
+        <?php else: ?>
+            <p>Logo not found</p>
+        <?php endif; ?>
     </div>
     
     <?php
-    ob_start();
     wp_nav_menu( array(
-        'theme_location' => 'primary-menu', 
-        'container' => false,  
-        'items_wrap' => '<ul>%3$s</ul>', 
+        'theme_location' => 'primary-menu',
+        'container' => false,
+        'items_wrap' => '<ul>%3$s</ul>',
+        'fallback_cb' => function () {
+            echo '<ul><li><a href="#">Menu not assigned</a></li></ul>';
+        },
     ));
-    $menu_output = ob_get_clean();
-    echo $menu_output;
     ?>
 
-    <div class="language-switcher">
-        <ul>
-            <?php
-            pll_the_languages(array(
-                'show_flags' => 1, 
-                'show_names' => 0  
-            ));
-            ?>
-        </ul>
-    </div>
+    <?php if (function_exists('pll_the_languages')): ?>
+        <div class="language-switcher">
+            <ul>
+                <?php
+                pll_the_languages(array(
+                    'show_flags' => 1,
+                    'show_names' => 0
+                ));
+                ?>
+            </ul>
+        </div>
+    <?php endif; ?>
 </div>
+
+<?php wp_footer(); ?>
+</body>
+</html>
