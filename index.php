@@ -15,7 +15,7 @@
     $herovideoFileUrl = $herovideo['url'];
     $map = get_field("map-img");
     $maptext = get_field("map-text");
-    
+
 
     ?>
 
@@ -45,9 +45,12 @@
                     <p><?php echo  $bookingtext; ?></p>
                 </div>
 
-                <div class="contact-form">
+                
+        <div class="contact-form">
+            <div class="form-wrapper">
                 <?php echo do_shortcode('[contact-form-7 id="1f164f8" title="Booking"]'); ?>
-                </div>
+            </div>
+        </div>
             </div>
         </div>
 
