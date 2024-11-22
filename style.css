@@ -260,6 +260,7 @@ input[type="submit"]:focus {
     margin: auto;
     margin-top: 100px;
     font-family: "Rubik", serif;
+    margin-bottom: 100px;
 }
 
 .map .image img {
@@ -343,6 +344,7 @@ input[type="submit"]:focus {
     margin: auto;
     margin-top: 100px;
     font-family: "Rubik", serif;
+    margin-bottom: 100px;
 }
 
 .team .image-team img {
