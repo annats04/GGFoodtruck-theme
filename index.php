@@ -62,25 +62,26 @@
         </div>
 
 
-        <div class="team">
-            <div class="content-team">
-                 <div class="text-team">
+        <div class="map">
+            <div class="content">
+                 <div class="text">
             <h1><?php echo  $maph1; ?></h1>
             <p><?php echo  $maptext; ?></p>
                 </div>
-        <div class="image-team">
-        <img src="<?php echo $map["url"]; ?>" alt="team image" class="image-team" >
+        <div class="image">
+        <img src="<?php echo $map["url"]; ?>" alt="map image" class="image" >
         </div>
     </div>
 </div>
 
+
         <!-- Map Section -->
-        <div class="map">
-    <div class="content">
-        <div class="image">
-        <img src="<?php echo $team["url"]; ?>" alt="menu image" class="map" >
+        <div class="team">
+    <div class="content-team">
+        <div class="image-team">
+        <img src="<?php echo $team["url"]; ?>" alt="team image" class="team" >
         </div>
-        <div class="text">
+        <div class="text-team">
             <h1><?php echo  $teamh1; ?></h1>
             <p><?php echo  $teamtext; ?></p>
         </div>
