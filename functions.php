@@ -12,6 +12,11 @@ add_action("wp_enqueue_scripts", "food_truck_theme_load_resources");
 
 add_theme_support( 'post-thumbnails' );
 
+function theme_enqueue_styles() {
+    wp_enqueue_style('theme-style', get_stylesheet_uri());
+}
+add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
+
 function food_truck_theme_remove_gutenberg(){
     remove_post_type_support("page", "editor");
 }

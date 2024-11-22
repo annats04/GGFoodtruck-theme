@@ -41,11 +41,13 @@
                 <h1><?php echo  $bookingheadline; ?></h1>
                     <p><?php echo  $bookingtext; ?></p>
                 </div>
+                
                 <div class="contact-form">
                 <?php echo do_shortcode('[contact-form-7 id="1f164f8" title="Booking"]'); ?>
                 </div>
             </div>
         </div>
+
 
     <?php endwhile; ?>
 <?php endif; ?>
