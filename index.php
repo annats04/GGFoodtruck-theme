@@ -33,12 +33,13 @@
        <div class="intro">
        <h1><?php echo $aboutheadline; ?></h1>
        <p><?php echo  $abouttext; ?></p>
-<h2>This sucks man! Git doesnt work properly</h2>
+<h2>Does this work?</h2>
 
        <img src="<?php echo $collage["url"]; ?>" alt="collage image" class="intro" >
 
        </div>
 
+       
         <!-- Menu Section -->
         <div class="menu">
         <img src="<?php echo $menu["url"]; ?>" alt="menu image" class="menu" >
